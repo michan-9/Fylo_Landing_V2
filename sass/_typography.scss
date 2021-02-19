@@ -8,7 +8,10 @@
   font-size: var(--flarge);
   line-height: var(--llarge);
   color: var(--dark-blue);
-  text-align: center;
+
+  @include responsive(tab-port) {
+    text-align: center;
+  }
 
   @include responsive(phone) {
     font-size: var(--fmedium);
