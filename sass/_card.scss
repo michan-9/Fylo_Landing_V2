@@ -1,0 +1,28 @@
+.card {
+  padding: var(--basic-padding);
+  background-color: var(--light-blue);
+  color: var(--light-gray);
+  display: flex;
+  justify-content: space-between;
+
+  @include responsive(tab-port) {
+    text-align: center;
+    flex-direction: column;
+  }
+
+  &__text-box {
+    flex: 0 0 43%;
+  }
+
+  &__form-box {
+    flex: 0 0 40%;
+
+    @include responsive(tab-port) {
+      margin-top: 2rem;
+    }
+  }
+
+  &__text {
+    margin-top: 2.5rem;
+  }
+}

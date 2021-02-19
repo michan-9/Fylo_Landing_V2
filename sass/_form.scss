@@ -1,0 +1,95 @@
+/* FORM VER 1 */
+
+.form {
+  padding: 1rem 0;
+  position: relative;
+
+  @include responsive(tab-port) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__input {
+    font-family: inherit;
+    font-size: inherit;
+    border: 1px solid currentColor;
+    border-radius: 4px;
+    padding: 1.5rem 5rem;
+    margin-right: 2rem;
+
+    @include responsive(tab-land) {
+      padding: 1rem;
+      width: 50%;
+    }
+
+    @include responsive(tab-port) {
+      padding: 1.5rem;
+      width: 100%;
+      margin-bottom: 3rem;
+    }
+
+    &:focus {
+      outline: 1px solid var(--pink);
+      border: 1px solid transparent;
+    }
+  }
+
+  &__label {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    bottom: -25%;
+    color: var(--pink);
+
+    @include responsive(tab-port) {
+      bottom: 43%;
+    }
+  }
+
+  &__input:invalid + &__label {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+/* FORM VER 2 */
+
+.form {
+  &--column {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__input {
+    &--column {
+      margin-right: 0;
+
+      &:focus {
+        outline: 1px solid var(--pink);
+        border: 1px solid transparent;
+      }
+
+      @include responsive(tab-land) {
+        width: 100%;
+      }
+
+      @include responsive(tab-port) {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+
+  &__label {
+    &--column {
+      font-size: var(--fxsmall);
+      bottom: 40%;
+      color: var(--light-gray);
+
+      @include responsive(tab-port) {
+        font-size: var(--fsmall);
+        bottom: 40%;
+      }
+    }
+  }
+}

@@ -1,0 +1,45 @@
+.btn {
+  font-family: var(--fsecondary);
+  font-size: var(--fnormal);
+  font-weight: 400;
+
+  &:link,
+  &:visited {
+    text-decoration: none;
+  }
+
+  &--text {
+    color: var(--cyan);
+    padding-bottom: 3px;
+    border-bottom: 1px solid currentColor;
+    transition: all 0.2s;
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+
+  &--form {
+    color: var(--light-gray);
+    font-weight: 700;
+    background-color: var(--blue);
+    border-radius: 4px;
+    border: 1px solid var(--blue);
+    box-shadow: var(--shadow-2);
+    padding: 1.5rem 5rem;
+    transition: all 0.2s;
+
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+
+  &--formcol {
+    align-self: flex-start;
+    margin-top: 2rem;
+
+    @include responsive(tab-port) {
+      align-self: unset;
+    }
+  }
+}

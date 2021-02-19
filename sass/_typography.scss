@@ -1,0 +1,24 @@
+%heading {
+  font-family: var(--fsecondary);
+  font-weight: 700;
+}
+
+.heading-2 {
+  @extend %heading;
+  font-size: var(--flarge);
+  line-height: var(--llarge);
+  color: var(--dark-blue);
+  text-align: center;
+
+  @include responsive(phone) {
+    font-size: var(--fmedium);
+    line-height: var(--lmedium);
+  }
+}
+
+.heading-3 {
+  @extend %heading;
+  font-size: var(--fmedium);
+  line-height: var(--lmedium);
+  color: var(--light-gray);
+}

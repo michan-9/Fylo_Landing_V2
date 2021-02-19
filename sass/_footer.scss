@@ -1,0 +1,99 @@
+.footer {
+  background-color: var(--dark-blue);
+  padding: var(--basic-padding);
+  color: var(--light-gray);
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3rem;
+
+    @include responsive(tab-port) {
+      flex-direction: column;
+    }
+  }
+
+  &__icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    fill: var(--light-gray);
+
+    &--fb,
+    &--tw,
+    &--ig {
+      box-sizing: content-box;
+      padding: 1rem;
+      border-radius: 50%;
+      border: 2px solid var(--light-gray);
+    }
+
+    &--fb:hover {
+      fill: #3b5998;
+      border: 2px solid #3b5998;
+    }
+
+    &--tw:hover {
+      fill: #00acee;
+      border: 2px solid #00acee;
+    }
+
+    &--ig:hover {
+      fill: #e1306c;
+      border: 2px solid #e1306c;
+    }
+  }
+
+  &__info-box {
+    @include responsive(tab-port) {
+      margin: 3rem 0;
+    }
+
+    & > * {
+      display: flex;
+      margin-bottom: 2rem;
+    }
+
+    & > * :first-child {
+      margin-right: 2rem;
+    }
+  }
+
+  &__list {
+    list-style: none;
+
+    @include responsive(tab-port) {
+      margin-bottom: 3rem;
+    }
+
+    & > * {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__link:link,
+  &__link:visited {
+    text-decoration: none;
+    color: currentColor;
+    margin-bottom: 1rem;
+    transition: all 0.2s;
+  }
+
+  &__link:hover {
+    color: var(--light-blue);
+  }
+
+  &__media {
+    display: flex;
+    margin-right: 15rem;
+
+    @include responsive(tab-port) {
+      display: flex;
+      justify-content: center;
+      margin-right: 0;
+    }
+
+    & > * {
+      margin-left: 1rem;
+    }
+  }
+}

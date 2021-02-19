@@ -1,0 +1,46 @@
+/* CSS VARIABLES */
+
+:root {
+  --fprimary: "Open Sans", sans-serif;
+  --fsecondary: "Raleway", sans-serif;
+
+  --dark-blue: hsl(243, 87%, 12%);
+  --light-blue: hsl(238, 22%, 44%);
+
+  --blue: hsl(224, 93%, 58%);
+  --cyan: hsl(170, 45%, 43%);
+  --pink: hsl(322, 100%, 66%);
+
+  --light-gray: hsl(240, 75%, 98%);
+  --dark-gray: hsl(0, 0%, 75%);
+
+  --flarge: 4rem;
+  --llarge: 5rem;
+
+  --fmedium: 3.2rem;
+  --lmedium: 3.5rem;
+
+  --fnormal: 1.8rem;
+  --lnormal: 2.3rem;
+
+  --fsmall: 1.5rem;
+  --lsmall: 1.9rem;
+
+  --fxsmall: 1rem;
+  --lxsmall: 1.2rem;
+
+  --bcircle: 50%;
+  --boval: 100px;
+  --blarge: 24px;
+  --bnormal: 12px;
+  --bsmall: 8px;
+
+  --shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  --shadow-2: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+
+  --basic-padding: 8rem;
+
+  @include responsive(phone) {
+    --basic-padding: 4rem;
+  }
+}

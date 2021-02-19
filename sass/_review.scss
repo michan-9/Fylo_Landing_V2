@@ -1,0 +1,49 @@
+.review {
+  padding: 2.5rem;
+  margin-top: 5rem;
+  background-color: #fff;
+  box-shadow: var(--shadow);
+  border-radius: var(--bnormal);
+  width: 55%;
+
+  @include responsive(tab-land) {
+    width: 70%;
+  }
+
+  @include responsive(phone) {
+    width: 85%;
+  }
+
+  &__text {
+    font-size: var(--fsmall);
+  }
+
+  &__info {
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    gap: 0 1rem;
+    margin-top: 2rem;
+    align-items: center;
+  }
+
+  &__img {
+    grid-column: 1 / 2;
+    grid-row: span 2;
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+  }
+
+  &__name {
+    grid-column: 2 / 3;
+    font-size: var(--fsmall);
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+
+  &__position {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    font-size: var(--fxsmall);
+  }
+}
